@@ -5,6 +5,13 @@
   </head>
   <body style="background-image: linear-gradient(to bottom, #bdc1b2, #87a7ad);">
     <a-scene>
+      <a-assets>
+        <!-- Assuming "background.jpg" is the name of your uploaded image -->
+        <img id="background-img" src="path_to_your_uploaded_image.jpg">
+      </a-assets>
+
+      <!-- Set the image as the background using a-sky -->
+      <a-sky src="#background-img"></a-sky>
       <!--lighting-->
       <a-light type="spot" position="5 4 8" color="white" intensity="0.9"></a-light>
       
