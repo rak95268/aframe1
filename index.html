@@ -1,53 +1,53 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>My First A-Frame Scene</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-</head>
-<body>
-    <a-scene>
-    <a-light type="ambient" color="#fcf9b8"></a-light>
-    <a-light type="directional" position="0 1 0" target="#sphere"></a-light>
-    <a-camera position="0 0 4"></a-camera>
-    <!-- Red Sphere -->
-    <a-sphere position="0 3 -3" radius="1.25" color="#FF0000"></a-sphere>
+  <a-scene>
+      <!--lighting-->
+      <a-light type="spot" position="5 4 8" color="white" intensity="0.9"></a-light>
+      
+      <!-- cloud 1 -->
+      <a-sphere position="-1 5 -6" radius="0.6" color="#f0f0f0"></a-sphere>
+      <a-sphere position="-0.5 5.2 -6" radius="0.7" color="#f0f0f0"></a-sphere>
+      <a-sphere position="0 5 -6" radius="0.6" color="#f0f0f0"></a-sphere>
+      <a-sphere position="-1.5 4.9 -6" radius="0.5" color="#f0f0f0"></a-sphere>
+      <a-sphere position="0 5 -6" radius="0.6" color="#f0f0f0"></a-sphere>
     
-    <!-- Large Yellow Box 
-    <a-box position="-2 1 -5" depth="1" height="1.5" width="1.5" color="#FFFF00"></a-box>
-    
-    Blue Box 
-    <a-box position="0.5 0.5 -3" depth="0.5" height="1" width="1" color="#0000FF"></a-box>
-    
-     Green Box 
-    <a-box position="-2 0.5 -3" depth="0.5" height="1" width="1" color="#00FF00"></a-box>
-    
-    Small Pink Box
-    <a-box position="1.5 0.5 -3" depth="0.25" height="0.5" width="0.5" color="#FFC0CB"></a-box>
+      <!-- cloud 2 -->
+      <a-sphere position="2 4 -6" radius="0.4" color="#f0f0f0"></a-sphere>
+      <a-sphere position="2.5 4.2 -6" radius="0.5" color="#f0f0f0"></a-sphere>
+      <a-sphere position="3 4 -6" radius="0.4" color="#f0f0f0"></a-sphere>
+      <a-sphere position="2.5 3.9 -6" radius="0.3" color="#f0f0f0"></a-sphere>
+      <a-sphere position="3.5 4 -6" radius="0.4" color="#f0f0f0"></a-sphere>
 
-    <a-box position="-1.0 1.0 -1.5" width="0.5" height="1" depth="0.02" color="#FFFF00"></a-box>
-    <a-box position="0.5 2.0 -1.5" width="0.5" height="0.5" depth="0.02" color="#0000FF"></a-box>
-    <a-box position="1.2 1.5 -1.5" width="0.3" height="0.3" depth="0.02" color="#008000"></a-box>
-    <a-box position="1.5 0.5 -1.5" width="0.4" height="0.4" depth="0.02" color="#800080"></a-box>
-    -->
-    <a-box position="-1.75 1.0 -4" rotation="0 0 0" width="1" height="1" depth="0.1" color="#f4d142"></a-box>
+      <!-- cloud 3 -->
+      <a-sphere position="-3 3 -6" radius="0.6" color="#f0f0f0"></a-sphere>
+      <a-sphere position="-2.5 3.2 -6" radius="0.7" color="#f0f0f0"></a-sphere>
+      <a-sphere position="-2 3 -6" radius="0.6" color="#f0f0f0"></a-sphere>
+      <a-sphere position="-3.5 2.9 -6" radius="0.5" color="#f0f0f0"></a-sphere>
+      <a-sphere position="-2 3 -6" radius="0.6" color="#f0f0f0"></a-sphere>
+      
+        <a-entity>
+        <!--box behind man-->
+        <a-box position="0 -3 -10" width="10" height="2.5" depth="3" color="#7e7b6e"></a-box>
 
-    <!-- Blue square -->
-    <a-box position="-6.125 0.5 -4" rotation="0 0 0" width="7.75" height="2" depth="0.1" color="#
+        <!--hat-->    
+        <a-cylinder radius="0.7" height=".5" position="0 4.5 -6" color="#3f3f37"></a-cylinder>
+        <a-box position="0 3.7 -5" width="1.5" height=".2" depth="0.1" color="#3f3f37"></a-box>
 
-    <!-- Green rectangle -->
-    <a-box position="-1 1.5 -4" rotation="0 0 0" width="0.5" height="1" depth="0.1" color="#079d49"></a-box>
+        <!--head and apple-->
+        <a-sphere position="0 4 -7" radius=".9" height="0.5" color="#EEBB91"></a-sphere>
+        <a-sphere position="0 3.2 -5" radius=".3" color="#7CB93F"></a-sphere>
 
-    <!-- Red rectangle -->
-    <a-box position="1 1 -4" rotation="0 0 0" width="0.5" height="2" depth="0.1" color="#be1e2d"></a-box>
+        <!--buttons--> 
+        <a-circle position="0 .8 -4" radius=".05" color="#000000"></a-circle>
+        <a-circle position="0 1.1 -4" radius=".05" color="#000000"></a-circle>
 
-    <!-- Background Planes -->
-    <!-- Adjust the position and rotation to create the desired abstract background -->
-    <a-plane position="0 1.5 -5" rotation="0 0 0" width="20" height="20" material="src: background.png;"></a-plane>
-    
-    <!-- Set the sky color or add an environment asset for the background -->
-    <a-sky color="#ECECEC"></a-sky>
-</a-scene>
+        <!--body-->
+        <a-box position="0 0.45 -5" width="2.3" height="4.5" depth="0.1" color="#3f3f37"></a-box>
+        <a-triangle position="0 2 -4" width="1" height="1" rotation="0 0 180" material="color: #FFFFFF"></a-triangle>
+        <a-box position="0 1.87 -3" width=".3" height=".8" depth="0.1" color="#b7291d"></a-box>
+        <a-box position="0.5 0.5 -5.5" width="2" height="4" depth="0.1" color="#3f3f37"></a-box>
+        <a-box position="-0.5 0.5 -5.5" width="2" height="4" depth="0.1" color="#3f3f37"></a-box>
 
-</body>
-</html>
+        <!--arms-->
+        <a-box position="0.5 -1.5 -5.5" width="2" height="1" depth="0.1" color="#EEBB91"></a-box>
+        <a-box position="-0.5 -1.5 -5.5" width="2" height="1" depth="0.1" color="#EEBB91"></a-box>
+      </a-entity>
+    </a-scene>
